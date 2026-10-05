@@ -119,13 +119,15 @@ if "Overview" in menu:
         </tr>"""
 
     st.markdown(f"""
-    <div class="chart-card" style="animation:slideInUp .55s ease .5s both;">
-      <table class="etable">
-        <thead><tr>
-          <th>Energy Source</th><th>Type</th><th>gCO₂ / kWh</th><th>Relative Pollution</th>
-        </tr></thead>
-        <tbody>{rows_html}</tbody>
-      </table>
+    <div class="chart-card table-responsive-wrapper" style="animation:slideInUp .55s ease .5s both;">
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%;">
+        <table class="etable">
+          <thead><tr>
+            <th>Energy Source</th><th>Type</th><th>gCO₂/kWh</th><th>Relative Pollution</th>
+          </tr></thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
     </div>
     """, unsafe_allow_html=True)
     notice("💡", "<strong>Key takeaway:</strong> Coal (820 g/kWh) produces <strong>75× more CO₂</strong> than Wind (11 g/kWh) for the same amount of electricity. Switching to renewables has a massive impact.", "lime")

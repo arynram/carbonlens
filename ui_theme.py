@@ -303,23 +303,26 @@ div[data-testid="stSlider"] [data-testid="stThumbValue"] {
 /* Emission table */
 .etable {
   width: 100%;
+  min-width: 440px;
   border-collapse: collapse;
   font-family: 'VT323', monospace !important;
   font-size: 21px !important;
 }
 .etable th {
   font-family: 'Press Start 2P', monospace !important;
-  font-size: 0.6rem !important;
+  font-size: 0.58rem !important;
   background: #2b2b2b !important;
   color: #ffffff !important;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: 2px solid #000000;
   text-align: left;
+  white-space: nowrap;
 }
 .etable td {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border: 2px solid #999999;
   color: #111111;
+  white-space: nowrap;
 }
 .etable tr:hover td {
   background: #d6e2c2;
@@ -328,7 +331,8 @@ div[data-testid="stSlider"] [data-testid="stThumbValue"] {
   background: #000000;
   border: 2px solid #444444;
   height: 10px;
-  width: 120px;
+  width: 100px;
+  max-width: 100px;
   display: inline-block;
   border-radius: 0px !important;
   vertical-align: middle;
@@ -341,14 +345,32 @@ div[data-testid="stSlider"] [data-testid="stThumbValue"] {
 
 .pill {
   font-family: 'Press Start 2P', monospace !important;
-  font-size: 0.55rem !important;
-  padding: 3px 6px;
+  font-size: 0.52rem !important;
+  padding: 3px 5px;
   border: 2px solid #000000;
   border-radius: 0px !important;
   display: inline-block;
 }
 .pill-green { background: #45b535; color: #ffffff; text-shadow: 1px 1px 0 #000; }
 .pill-red   { background: #d92626; color: #ffffff; text-shadow: 1px 1px 0 #000; }
+
+/* Mobile screen optimization */
+@media (max-width: 768px) {
+  .block-container {
+    padding: 1rem 0.8rem 2rem !important;
+    margin: 0.5rem auto !important;
+    border-width: 3px !important;
+  }
+  .card, .feat-card, .chart-card {
+    padding: 10px 10px !important;
+  }
+  .etable {
+    min-width: 400px;
+  }
+  .bar-bg {
+    width: 70px !important;
+  }
+}
 </style>
 """
 
