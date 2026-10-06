@@ -32,9 +32,9 @@ from ui_theme import (
 # PAGE CONFIG & THEME
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="CarbonLens - Minecraft Edition",
+    page_title="CarbonLens - Energy & Emission Analytics",
     layout="wide",
-    page_icon="⛏️",
+    page_icon="⚡",
     initial_sidebar_state="collapsed",
 )
 
